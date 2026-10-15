@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d12">
+  <meta name="description" content="Прошейте WROOM Toolkit на ESP32-WROOM-32 прямо из браузера через USB.">
+  <title>WROOM Toolkit — Web Flasher</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="WROOM Toolkit — наверх">
+        <span class="brand-mark" aria-hidden="true">W</span>
+        <span>WROOM<span class="brand-light">Toolkit</span></span>
+      </a>
+      <span class="source-link">ESP32 EDITION <span aria-hidden="true">·</span> 2026</span>
+    </header>
+
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> WEB INSTALLER <span class="eyebrow-version">v0.1.0</span></div>
+        <h1>Новая жизнь<br>твоего <span>ESP32.</span></h1>
+        <p class="intro">Установи WROOM Toolkit прямо из браузера. Без терминала, драйверных утилит и лишних шагов.</p>
+        <div class="compatibility"><span class="check">✓</span> ESP32-WROOM-32 <span class="compat-divider">·</span> USB-UART CH340C</div>
+      </div>
+
+      <div class="board-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="board">
+          <div class="board-port"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="board-left-pin"></div><div class="board-right-pin"></div>
+          <div class="chip-main"><span>ESPRESSIF</span><strong>ESP32</strong><small>WROOM-32</small></div>
+          <div class="chip-usb">CH340C</div>
+          <div class="board-led"></div>
+          <div class="board-ant"></div>
+          <div class="board-hole hole-a"></div><div class="board-hole hole-b"></div>
+          <div class="board-hole hole-c"></div><div class="board-hole hole-d"></div>
+          <div class="board-label label-a">3V3</div><div class="board-label label-b">GND</div>
+        </div>
+        <span class="art-glow"></span>
+        <span class="float-tag tag-usb"><span class="tag-dot"></span> USB READY</span>
+        <span class="float-tag tag-chip">DUAL CORE <span>·</span> 240 MHz</span>
+      </div>
+    </section>
+
+    <section class="installer" aria-labelledby="install-title">
+      <div class="installer-heading">
+        <div><div class="section-kicker">БЫСТРАЯ УСТАНОВКА</div><h2 id="install-title">Прошить устройство</h2></div>
+        <span class="secure"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4.5 7V5a3.5 3.5 0 0 1 7 0v2M3.5 7h9v7h-9z"/></svg> Соединение с устройством</span>
+      </div>
+
+      <div class="steps" aria-label="Этапы прошивки">
+        <div class="step active" data-step="1"><span class="step-num">01</span><span>Подключение</span></div>
+        <span class="step-line"></span>
+        <div class="step" data-step="2"><span class="step-num">02</span><span>Установка</span></div>
+        <span class="step-line"></span>
+        <div class="step" data-step="3"><span class="step-num">03</span><span>Готово</span></div>
+      </div>
+
+      <div class="install-body" id="install-body">
+        <div class="usb-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 38V10m0 0-6 6m6-6 6 6M24 24H13v9m11-9h11v9m-22 0a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm22 0a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/><circle cx="24" cy="7" r="3"/></svg></div>
+        <div class="install-copy"><h3 id="status-title">Подключи ESP32 по USB</h3><p id="status-text">Используй кабель с передачей данных. Когда браузер попросит, выбери COM-порт с CH340.</p></div>
+        <button class="install-button" id="connect-button" type="button"><span id="button-label">Подключить устройство</span><span class="button-arrow" aria-hidden="true">→</span></button>
+      </div>
+      <div class="progress-wrap" id="progress-wrap" hidden><div class="progress-meta"><span id="progress-label">Подготовка прошивки</span><span id="progress-value">0%</span></div><div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div></div>
+      <div class="log" id="log" role="status" aria-live="polite"></div>
+      <div class="port-note"><span class="info-icon">i</span><span>Нужен Chrome или Edge. Работающий Serial Monitor или другая программа может занять порт.</span></div>
+    </section>
+
+    <section class="features" aria-label="Возможности прошивки">
+      <div class="feature"><span class="feature-icon icon-wifi">⌁</span><div><h3>Wi-Fi сканер</h3><p>Сети рядом, уровень сигнала и канал</p></div></div>
+      <div class="feature"><span class="feature-icon icon-chip">⌘</span><div><h3>Информация о чипе</h3><p>Память, частота и состояние ESP32</p></div></div>
+      <div class="feature"><span class="feature-icon icon-lock">◈</span><div><h3>Прошивка из браузера</h3><p>Прямое USB-подключение без лишних программ</p></div></div>
+    </section>
+
+    <footer><span>© 2026 WROOM Toolkit</span><span>Сделано для ESP32-WROOM-32</span><a href="../README.md">Документация</a></footer>
+  </main>
+</body>
+</html>
